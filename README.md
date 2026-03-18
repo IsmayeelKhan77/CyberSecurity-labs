@@ -43,3 +43,11 @@ This section contains practical cybersecurity labs completed during my internshi
 Transitioning into:
 - Identity & Access Management (IAM)
 - IT Support / Help Desk roles
+
+---
+
+## Internship Experience
+
+- Completed cybersecurity internship at NullClass
+- Worked on SOC-based labs and threat detection projects
+- [View Internship Details](internship/)
