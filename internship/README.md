@@ -22,7 +22,7 @@ This internship includes multiple hands-on labs available in this folder:
 ## Proof of Completion
 
 ### Certificate
-![Certificate](proof/certificate.png)
+![Certificate](https://github.com/IsmayeelKhan77/CyberSecurity-labs/blob/main/internship/proof/Internship%20Certificate.png?raw=true)
 
 ### Letter of Recommendation
 ![LOR](proof/lor.png)
