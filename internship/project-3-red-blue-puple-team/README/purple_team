@@ -1,0 +1,48 @@
+# Purple Team Handover — HawkEye Lab
+**Author:** Ismayeel khan
+**Role:** Purple Team (Red + Blue handover)  
+**Capture Date:** 2019-04-10
+
+---
+
+## 1 — Quick summary
+Attacker downloaded `tkraw_Protected99.exe` from `proforma-invoices.com`. The malware collected credentials and exfiltrated them by email to `sales.del@macwinlogistics.in` every 10 minutes. Red Team captured the flow and IOCs; Blue Team created detection and containment steps. This is a short handover that connects both sides and lists the top priorities.
+
+---
+
+## 2 — Key findings (IOCs)
+- Malicious domain: `proforma-invoices.com` (packet #204)  
+- Malicious file: `tkraw_Protected99.exe`  
+- File MD5: `71826ba081e303866ce2a2534491a2f7`  
+- Exfil email: `sales.del@macwinlogistics.in`  
+- Example stolen creds: `roman.mcguire:P@ssw0rd$`  
+- Victim host: `BEIJING-5CD1-PC` (public IP: `173.66.146.112`)  
+
+---
+
+## 3 — Attack → Defense summary
+- **Attack step:** user visits an invoice domain → downloads an executable → malware collects creds → exfil via email every 10 minutes.  
+- **Where defenders should look:** DNS logs (for domain), web/proxy logs (for file download), mail logs (for repeated SMTP to suspect email), endpoint logs (for suspicious process runs).  
+- **Immediate defense:** block the domain and email, isolate the host, blacklist the file hash, rotate creds, and conduct a hunt for similar signs.
+
+---
+
+## 4 — Top prioritized actions (do these first)
+1. Block `proforma-invoices.com` and `sales.del@macwinlogistics.in` at network/mail layers.  
+2. Quarantine `BEIJING-5CD1-PC` and capture disk + memory images.  
+3. Blacklist hash `71826ba081e303866ce2a2534491a2f7` in EDR.  
+4. Rotate and secure exposed accounts; require MFA.  
+5. Create SIEM alerts for filename downloads and repeated SMTP exfil patterns.  
+6. Hunt the network for other similar hosts.
+
+---
+
+## 5 — What worked and what to improve
+**Worked:** PCAP gave clear visibility; filename/domain detection was effective; periodic exfil was easy to spot.  
+**Improve:** Add more endpoint telemetry (process creation, scheduled tasks), strengthen mail gateway rules to detect automated exfil, and prepare alerts that detect encrypted exfil strategies.
+
+---
+
+**End of handover.**  
+If you want, I can now convert these into a single nicely formatted `README.md` overview or generate the `hashes.txt` contents you can drop into the `evidence/` folder.
+

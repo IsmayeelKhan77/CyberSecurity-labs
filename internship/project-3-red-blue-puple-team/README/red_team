@@ -1,0 +1,69 @@
+# Red Team Report — HawkEye Lab
+**Author:** Ismayeel khan
+**Role:** Red Team (lab)  
+**Capture Date:** 2019-04-10
+
+---
+
+## 1 — Executive summary
+I worked the HawkEye lab from an attacker perspective and captured the main steps. The victim downloaded a malicious executable (`tkraw_Protected99.exe`) from a suspicious invoice-style domain and the malware exfiltrated collected data via email every 10 minutes. Below are the timeline, findings, and IOCs.
+
+---
+
+## 2 — Objective
+- Simulate the attacker: deliver a payload, collect credentials, and exfiltrate data.
+
+---
+
+## 3 — Environment & capture
+- **Total packets:** 4003  
+- **First packet time:** 2019-04-10 20:37  
+- **Capture duration:** 01:03:41  
+- **Victim host (most active):** `BEIJING-5CD1-PC`  
+- **Most active MAC (link-level):** `00:08:02:1c:47:ae` (Hewlett-Packard)  
+- **Organization DNS server:** `10.4.10.4`  
+- **Victim public IP (observed):** `173.66.146.112`
+
+---
+
+## 4 — Timeline (high level)
+- `2019-04-10 20:37` — capture starts.
+- Packet #204 — DNS query for `proforma-invoices.com`.
+- HTTP GET observed that downloaded `tkraw_Protected99.exe`.
+- Malware ran, collected credentials, and sent them out via email periodically (every 10 minutes).
+- Capture ends after ~1 hour.
+
+---
+
+## 5 — Evidence & IOCs
+- **Malicious filename:** `tkraw_Protected99.exe`  
+- **MD5:** `71826ba081e303866ce2a2534491a2f7`  
+- **Malware family (lab):** Reborn v9 (lab ID)  
+- **Exfil email:** `sales.del@macwinlogistics.in`  
+- **Password seen (in capture):** `Sales@23`  
+- **Stolen creds example:** `roman.mcguire:P@ssw0rd$`  
+- **Domain (packet 204):** `proforma-invoices.com`  
+
+---
+
+## 6 — What I did (short)
+- Opened the PCAP and found the DNS query for the lure domain.  
+- Followed the HTTP stream to the downloaded file and noted the filename and hash.  
+- Looked for repeated outbound traffic and found periodic email exfiltration.  
+- Collected IOCs (domain, email, file hash, victim host/IP).
+
+> **Note:** I saved screenshots: DNS packet, Follow TCP Stream for the download, endpoints stats. I also exported the file hash for the payload. Do NOT execute any binaries.
+
+---
+
+## 7 — Quick attacker behavior summary
+- Lure domain used (invoice themed) → user downloads executable → malware runs and collects data → periodic exfil via email every 10 minutes.
+
+---
+
+## 8 — Appendix / artifacts
+- PCAP link: https://github.com/IsmayeelKhan77/internship-project-3/blob/main/91-hawkeye.zip
+- Hashes file: 71826ba081e303866ce2a2534491a2f7
+
+---
+

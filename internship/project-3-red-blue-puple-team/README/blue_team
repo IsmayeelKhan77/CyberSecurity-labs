@@ -1,0 +1,84 @@
+# Blue Team Report — HawkEye Lab
+**Author:** Ismayeel khan
+**Role:** Blue Team (lab)  
+**Capture Date:** 2019-04-10
+
+---
+
+## 1 — Executive summary
+This is the defensive write-up for the HawkEye lab. Using the Red Team findings, I listed detections, triage steps, containment and remediation actions to handle the `tkraw_Protected99.exe` incident.
+
+---
+
+## 2 — Short incident recap
+- **Victim host:** `BEIJING-5CD1-PC`  
+- **Malicious file:** `tkraw_Protected99.exe` (MD5: `71826ba081e303866ce2a2534491a2f7`)  
+- **Lure domain:** `proforma-invoices.com`  
+- **Exfil method:** email to `sales.del@macwinlogistics.in` every 10 minutes  
+- **Stolen credential example:** `roman.mcguire:P@ssw0rd$`
+
+---
+
+## 3 — High priority IOCs (block/monitor)
+- Domain: `proforma-invoices.com`  
+- Email: `sales.del@macwinlogistics.in`  
+- File hash (MD5): `71826ba081e303866ce2a2534491a2f7`  
+- Hostname/IP: `BEIJING-5CD1-PC` / `173.66.146.112`
+
+---
+
+## 4 — Detection searches
+(If you use Splunk, ELK, or similar, adapt these for your environment.)
+
+- **Search for HTTP download of payload filename**
+  - Look for web/proxy logs with `tkraw_Protected99.exe` or the exact filename in URLs.
+
+- **Search for DNS query for suspicious domain**
+  - Look for queries to `proforma-invoices.com` or similar invoice-like domains.
+
+- **Search for repeated outbound SMTP**
+  - Look for multiple SMTP sessions from a host to `sales.del@macwinlogistics.in` (repeat every ~10 minutes).
+
+- **Search for suspicious PowerShell or command execution**
+  - Look for encoded PowerShell, IEX, or suspicious download-execute patterns in endpoint logs.
+
+---
+
+## 5 — Triage checklist
+1. Identify affected host(s) by hostname/IP and search logs for the filename and domain.  
+2. Collect volatile evidence from the host (memory, running processes, network connections).  
+3. Search for the payload on disk and match file hash.  
+4. Pull mail gateway logs for outbound connections to the exfil email.  
+5. Export PCAP snippets of the HTTP download and SMTP exfil for analysts.
+
+---
+
+## 6 — Containment actions (immediate)
+- Isolate `BEIJING-5CD1-PC` from the network (NAC/quarantine).  
+- Block `proforma-invoices.com` at DNS and firewall.  
+- Block `sales.del@macwinlogistics.in` at mail gateway.  
+- Quarantine the file hash in EDR/AV.  
+- Start password reset for exposed users and enable MFA.
+
+---
+
+## 7 — Remediation & recovery
+- Remove persistence and malware artifacts or rebuild the host if persistence can’t be fully removed.  
+- Rotate compromised credentials & require MFA.  
+- Scan other hosts for the same IOCs.  
+- Tune SIEM alerts and implement saved searches for the above detections.
+
+---
+
+## 8 — Detection tuning notes
+- Set saved alert for HTTP downloads of known bad filenames.  
+- Create a correlation rule: trigger high priority when `HTTP download` **and** `Outbound SMTP to unknown recipient` happen from same host within 30 minutes.  
+- Tune DNS alerts to ignore known harmless domains and reduce false positives.
+
+---
+
+
+> **Safety note:** Do not execute any samples. Only analyze or hash them in a safe environment.
+
+---
+
