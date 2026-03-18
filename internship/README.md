@@ -25,7 +25,7 @@ This internship includes multiple hands-on labs available in this folder:
 ![Certificate](https://github.com/IsmayeelKhan77/CyberSecurity-labs/blob/main/internship/proof/Internship%20Certificate.png?raw=true)
 
 ### Letter of Recommendation
-![LOR](proof/lor.png)
+![LOR](https://github.com/IsmayeelKhan77/CyberSecurity-labs/blob/main/internship/proof/Intern%20Letter%20of%20Recomendation.png?raw=true)
 
 ## Outcome
 Developed strong foundational skills in analyzing system logs, identifying suspicious activity, and understanding real-world security operations workflows.
