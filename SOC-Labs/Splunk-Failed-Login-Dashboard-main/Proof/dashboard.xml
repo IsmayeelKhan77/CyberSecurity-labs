@@ -1,0 +1,93 @@
+<dashboard version="1.1" theme="dark">
+  <label>Failed Login Monitoring</label>
+  <row>
+    <panel>
+      <chart>
+        <title>Failed Logins by User</title>
+        <search>
+          <query>index=failed_logins
+| stats count by Account_Name
+| sort - count</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="charting.chart">bar</option>
+        <option name="charting.drilldown">none</option>
+        <option name="height">339</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>Failed Logins by User</title>
+        <search>
+          <query>index=failed_logins
+| table _time, Account_Name, host</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="charting.chart">radialGauge</option>
+        <option name="charting.chart.rangeValues">[0,30,70,100]</option>
+        <option name="charting.chart.style">minimal</option>
+        <option name="charting.gaugeColors">["0x118832","0x1182f3","0xd41f1f"]</option>
+        <option name="height">337</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <chart>
+        <title>Failed Logins by User</title>
+        <search>
+          <query>index=failed_logins
+| timechart span=5m count</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">none</option>
+        <option name="height">285</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>Failed Logins by Users</title>
+        <search>
+          <query>index=failed_logins
+| timechart span=5m count</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.chart">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.placement">right</option>
+        <option name="height">285</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Failed Logins by User</title>
+        <search>
+          <query>index=failed_logins
+| stats count by Account_Name, host
+| sort - count</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="drilldown">none</option>
+        <format type="color" field="count">
+          <colorPalette type="minMidMax" maxColor="#FFFFFF" minColor="#602CA1"></colorPalette>
+          <scale type="minMidMax"></scale>
+        </format>
+      </table>
+    </panel>
+  </row>
+</dashboard>

@@ -1,0 +1,31 @@
+Timestamp,Account_Name,Source_IP,EventCode,Failure_Reason
+2025-08-15T08:15:23Z,User123,192.168.1.10,4625,Invalid password
+2025-08-15T08:16:12Z,Admin,192.168.1.15,4625,Invalid password
+2025-08-15T08:17:45Z,Guest,192.168.1.20,4625,Unknown user name
+2025-08-15T08:18:03Z,TestUser,10.0.0.5,4625,Invalid password
+2025-08-15T08:19:12Z,User123,172.16.0.10,4625,Account locked out
+2025-08-15T08:20:44Z,Admin,192.168.1.15,4625,Invalid password
+2025-08-15T08:22:01Z,Service01,10.10.10.10,4625,Invalid password
+2025-08-15T08:23:55Z,BackupUser,192.168.1.25,4625,Unknown user name
+2025-08-15T08:24:44Z,User123,192.168.1.10,4625,Invalid password
+2025-08-15T08:26:12Z,Admin,192.168.1.15,4625,Invalid password
+2025-08-15T08:28:30Z,Guest,10.0.0.8,4625,Invalid password
+2025-08-15T08:29:21Z,TestUser,172.16.0.11,4625,Account disabled
+2025-08-15T08:30:42Z,User123,192.168.1.10,4625,Invalid password
+2025-08-15T08:31:59Z,Admin,192.168.1.15,4625,Invalid password
+2025-08-15T08:33:15Z,RandomUser,203.0.113.5,4625,Unknown user name
+2025-08-15T08:34:44Z,User123,192.168.1.10,4625,Invalid password
+2025-08-15T08:36:00Z,Service01,10.10.10.10,4625,Invalid password
+2025-08-15T08:37:22Z,Guest,192.168.1.20,4625,Unknown user name
+2025-08-15T08:38:10Z,Admin,172.16.0.12,4625,Invalid password
+2025-08-15T08:39:55Z,User123,192.168.1.10,4625,Account locked out
+2025-08-15T08:41:12Z,TestUser,10.0.0.9,4625,Invalid password
+2025-08-15T08:42:44Z,RandomUser,203.0.113.25,4625,Unknown user name
+2025-08-15T08:43:55Z,Admin,192.168.1.15,4625,Invalid password
+2025-08-15T08:45:32Z,Guest,192.168.1.20,4625,Invalid password
+2025-08-15T08:46:20Z,User123,192.168.1.10,4625,Invalid password
+2025-08-15T08:47:14Z,Service01,10.10.10.10,4625,Invalid password
+2025-08-15T08:48:59Z,Admin,172.16.0.14,4625,Invalid password
+2025-08-15T08:49:44Z,BackupUser,192.168.1.25,4625,Unknown user name
+2025-08-15T08:50:33Z,User123,192.168.1.10,4625,Invalid password
+2025-08-15T08:51:22Z,Admin,192.168.1.15,4625,Invalid password
