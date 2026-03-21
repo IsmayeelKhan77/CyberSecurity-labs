@@ -26,4 +26,4 @@ This repo contains my **easy notes** for the Oracle Cloud Infrastructure (OCI) F
 
 ---
 
-## Proof of Certificate: 
+## Proof of Certificate: (https://github.com/IsmayeelKhan77/CyberSecurity-labs/blob/main/Certifications-and-Notes/OCI-foundation/Certificate.jpeg?raw=true)
