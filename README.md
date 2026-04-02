@@ -34,7 +34,7 @@ This section contains practical cybersecurity labs completed during my internshi
 - Splunk
 - Wireshark
 - Elastic Stack
-- Linux Basics
+- Linux Basics  
 
 ---
 
