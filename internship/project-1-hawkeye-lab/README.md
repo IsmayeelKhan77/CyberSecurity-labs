@@ -8,27 +8,27 @@
 ## 1. Introduction  
 This report covers the **HawkEye Lab** from CyberDefenders.  
 I analyzed the provided PCAP file with Wireshark to investigate a HawkEye keylogger incident, identify IOCs, and track exfiltration of stolen data.  
-
----
+        
+---       
 
 ## 2. Tools Used  
 - Wireshark (packet analysis)  
 - CyberChef (decoding)  
-- Hashing tools (`certutil`)  
-- CyberDefenders platform  
+- Hashing tools (`certutil`)          
+- CyberDefenders platform       
 - VirusTotal
-
+                                          
 ---
-
+       
 ## 3. Steps Taken  
-1. Opened the `stealer.pcap` file in Wireshark.  
-2. Reviewed capture properties (packets, duration, timestamps).  
-3. Checked active endpoints and traffic patterns.  
+1. Opened the `stealer.pcap` file in Wireshark.                                                 
+2. Reviewed capture properties (packets, duration, timestamps).                                                      
+3. Checked active endpoints and traffic patterns.                                                                            
 4. Exported HTTP objects → found malicious file download.  
-5. Extracted and hashed the file.  
-6. Traced SMTP traffic → found stolen data exfiltration.  
+5. Extracted and hashed the file.                                   
+6. Traced SMTP traffic → found stolen data exfiltration.                                 
 7. Decoded SMTP credentials to identify attacker details.  
-8. Answered all 24 challenge questions and submitted successfully.  
+8. Answered all 24 challenge questions and submitted successfully.                                     
 
 ---
 
