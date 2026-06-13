@@ -4,7 +4,7 @@
 Completed a cybersecurity internship focused on Security Operations (SOC) fundamentals, including log analysis, threat detection, and network monitoring.
 
 ## Organization
-NullClass
+NullClass 
 
 ## Key Learning Areas
 - SIEM tools (Splunk / Elastic).
