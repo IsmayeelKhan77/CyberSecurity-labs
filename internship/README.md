@@ -7,17 +7,17 @@ Completed a cybersecurity internship focused on Security Operations (SOC) fundam
 NullClass 
 
 ## Key Learning Areas
-- SIEM tools (Splunk / Elastic).
-- Log analysis and threat detection.
-- Network traffic analysis using Wireshark.
-- Basic incident response workflows.
+- SIEM tools (Splunk / Elastic).                                                       
+- Log analysis and threat detection.               
+- Network traffic analysis using Wireshark.             
+- Basic incident response workflows.              
 
-## Projects Completed
-This internship includes multiple hands-on labs available in this folder:
-- SIEM Log Analysis.
-- Brute Force Detection.
+## Projects Completed                   
+This internship includes multiple hands-on labs available in this folder:                     
+- SIEM Log Analysis.                                                  
+- Brute Force Detection.                                                    
 - Correlation Rules.
-- Network Analysis.
+- Network Analysis.                                                    
 
 ## Proof of Completion
 
