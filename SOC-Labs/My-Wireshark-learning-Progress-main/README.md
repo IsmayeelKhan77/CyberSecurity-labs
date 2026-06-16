@@ -11,20 +11,20 @@ This repository contains my first hands-on practice with:
 
 ---
 
-## 🛠️ Tools Used
-- **Wireshark** (for packet capturing and analysis)
-- **My own WiFi network** (to generate real traffic)
-- **Basic networking commands** like ping
-
+## 🛠️ Tools Used            
+- **Wireshark** (for packet capturing and analysis)                      
+- **My own WiFi network** (to generate real traffic)                                                
+- **Basic networking commands** like ping             
+                         
 ---
 
-## 🌐 What I Did
+## 🌐 What I Did                           
 
 ### 1. DNS (Domain Name System)
-- **What it is:** DNS is like the phonebook of the internet. It translates domain names (like `google.com`) into IP addresses.  
-- **What I did:** I applied the filter `dns` in Wireshark and visited some websites.  
-- **What I saw:** Queries being sent to resolve domain names.
-- 
+- **What it is:** DNS is like the phonebook of the internet. It translates domain names (like `google.com`) into IP addresses.                       
+- **What I did:** I applied the filter `dns` in Wireshark and visited some websites.                 
+- **What I saw:** Queries being sent to resolve domain names.                                      
+-                      
 
 ---
 
