@@ -7,7 +7,7 @@
 ## What this project shows
 - I ingested a public dataset into Splunk Cloud.
 - I wrote an SPL detection for brute force attempts.
-- I converted the search into a scheduled alert (cron).
+- I converted the search into a scheduled alert (cron).                          
 - The alert triggers and can be triaged (screenshots below).
 
 ---
