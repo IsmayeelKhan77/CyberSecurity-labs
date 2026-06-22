@@ -20,7 +20,7 @@
 > Why O365 brute force? It’s one of the most common real-world attacks against user accounts. Repeated failed logins from the same IP against the same user is a strong early signal.
 
 ---
-
+                               
 ## SPL detection query
 
 > Set time range to **Last 5 minutes** before saving as an alert.
