@@ -14,13 +14,6 @@ This project demonstrates multiple Splunk visualizations built for security moni
 
 ---
 
-## 📸 Screenshot
-![Dashboard Screenshot](https://github.com/IsmayeelKhan77/Splunk-Failed-Login-Dashboard/blob/main/Proof/dashboard1.png?raw=true)
-![Another View](https://github.com/IsmayeelKhan77/Splunk-Failed-Login-Dashboard/blob/main/Proof/dashboard2.png?raw=true)
-
-
----
-
 ## 🛠️ How to Use
 1. Import the `dashboard.xml` file into your Splunk instance.
 2. Load your dataset (or use any login failure logs).
