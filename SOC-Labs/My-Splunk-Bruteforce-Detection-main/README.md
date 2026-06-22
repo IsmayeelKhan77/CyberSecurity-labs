@@ -1,7 +1,7 @@
 # Brute Force Login Detection 
 
 **Goal:** Detect repeated failed login attempts (possible brute force) using Splunk Cloud and a public dataset, and prove it with a working alert.
-
+                                   
 ---
 
 ## What this project shows
