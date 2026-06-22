@@ -11,8 +11,8 @@ Currently building hands-on skills through real-world labs and internship projec
 This section contains practical cybersecurity labs completed during my internship.
 
 ### Projects Included:
-- SIEM Log Analysis (Splunk / Elastic)
-- Brute Force Detection
+- SIEM Log Analysis (Splunk / Elastic)                                
+- Brute Force Detection                     
 - Correlation Rules Implementation
 - Network Traffic Analysis (Wireshark)
 
