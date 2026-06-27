@@ -15,7 +15,7 @@ This section contains practical cybersecurity labs completed during my internshi
 - Brute Force Detection                            
 - Correlation Rules Implementation
 - Network Traffic Analysis (Wireshark)          
-                    
+                            
 ---                                                                             
 
 ## Skills Demonstrated
