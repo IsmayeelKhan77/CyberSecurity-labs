@@ -19,7 +19,7 @@ This section contains practical cybersecurity labs completed during my internshi
 ---                                                                             
 
 ## Skills Demonstrated
-
+           
 - Log Analysis
 - Threat Detection
 - Basic Incident Response
