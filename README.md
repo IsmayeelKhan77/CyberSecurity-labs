@@ -12,7 +12,7 @@ This section contains practical cybersecurity labs completed during my internshi
     
 ### Projects Included:
 - SIEM Log Analysis (Splunk / Elastic)                                  
-- Brute Force Detection                          
+- Brute Force Detection                        
 - Correlation Rules Implementation
 - Network Traffic Analysis (Wireshark)          
                             
