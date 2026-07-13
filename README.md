@@ -14,7 +14,7 @@ This section contains practical cybersecurity labs completed during my internshi
 - SIEM Log Analysis (Splunk / Elastic)                                  
 - Brute Force Detection                      
 - Correlation Rules Implementation
-- Network Traffic Analysis (Wireshark)          
+- Network Traffic Analysis (Wireshark)         
                             
 ---                                                               
 
