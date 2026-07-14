@@ -16,7 +16,7 @@ This section contains practical cybersecurity labs completed during my internshi
 - Correlation Rules Implementation   
 - Network Traffic Analysis (Wireshark)           
   
----                                                   
+---                                                 
 
 ## Skills Demonstrated
            
