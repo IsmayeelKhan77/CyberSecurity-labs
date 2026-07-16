@@ -24,7 +24,7 @@ This section contains practical cybersecurity labs completed during my internshi
 - Threat Detection
 - Basic Incident Response
 - SIEM Tools (Splunk, Elastic)
-- Network Analysis
+- Network Analysis 
 - Documentation & Reporting            
 
 ---
