@@ -6,7 +6,7 @@ Currently building hands-on skills through real-world labs and internship projec
 
 ---
          
-## Internship Projects                                          
+## Internship Projects                                            
                                       
 This section contains practical cybersecurity labs completed during my internship.  
     
