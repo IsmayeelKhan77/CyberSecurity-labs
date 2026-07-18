@@ -17,7 +17,7 @@ This section contains practical cybersecurity labs completed during my internshi
 - Network Traffic Analysis (Wireshark)             
    
 ---                                                 
-
+ 
 ## Skills Demonstrated
            
 - Log Analysis
